@@ -1,12 +1,12 @@
 diff --git a/Dockerfile b/Dockerfile
-index 48f70f0..954235d 100644
+index e646aa4..954235d 100644
 --- a/Dockerfile
 +++ b/Dockerfile
 @@ -13,7 +13,7 @@
  # See the License for the specific language governing permissions and
  # limitations under the License.
  
--FROM golang:1.21.1@sha256:cffaba795c36f07e372c7191b35ceaae114d74c31c3763d442982e3a4df3b39e AS builder
+-FROM golang:1.21.1@sha256:2270a408c4cb38f8459839082d89afa4a2870773c509adf7641e9558167d0030 AS builder
 +FROM registry.access.redhat.com/ubi9/go-toolset@sha256:52ab391730a63945f61d93e8c913db4cc7a96f200de909cd525e2632055d9fa6 AS builder
  ENV APP_ROOT=/opt/app-root
  ENV GOPATH=$APP_ROOT
@@ -15,7 +15,7 @@ index 48f70f0..954235d 100644
  RUN CGO_ENABLED=1 go build -gcflags "all=-N -l" -o server_debug main.go
  
  # Multi-Stage production build
--FROM golang:1.21.1@sha256:cffaba795c36f07e372c7191b35ceaae114d74c31c3763d442982e3a4df3b39e as deploy
+-FROM golang:1.21.1@sha256:2270a408c4cb38f8459839082d89afa4a2870773c509adf7641e9558167d0030 as deploy
 +FROM registry.access.redhat.com/ubi9/go-toolset@sha256:52ab391730a63945f61d93e8c913db4cc7a96f200de909cd525e2632055d9fa6 as deploy
  
  # Retrieve the binary from the previous stage

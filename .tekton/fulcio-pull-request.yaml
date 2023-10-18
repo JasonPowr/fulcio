@@ -381,7 +381,7 @@ spec:
       taskRef:
         params:
         - name: name
-          value: go-unit-test
+          value: unit-test
         - name: bundle
           value: quay.io/securesign/fulcio-unit-test@sha256:3ece784b9bc785497a7d7f9db1c4e0c2fbaa4ff28afa649d3a85064c9e4b564a
         - name: kind

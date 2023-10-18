@@ -28,7 +28,7 @@ RUN go build -o server main.go
 RUN CGO_ENABLED=1 go build -gcflags "all=-N -l" -o server_debug main.go
 
 # debug compile options & debugger
-FROM deploy as debug
+FROM registry.access.redhat.com/ubi9/go-toolset@sha256:52ab391730a63945f61d93e8c913db4cc7a96f200de909cd525e2632055d9fa6 as debug
 RUN go install github.com/go-delve/delve/cmd/dlv@v1.8.0
 
 # overwrite server and include debugger

@@ -30,6 +30,14 @@ spec:
     value: .
   - name: revision
     value: '{{revision}}'
+  - name: hermetic
+    type: string
+    description: Execute the build with network isolation
+    value: "true"
+  - name: prefetch-input
+    description: Build dependencies to be prefetched by Cachi2
+    type: string
+    value: '{"type": "gomod", "path": "."}'
   pipelineSpec:
     finally:
     - name: show-sbom

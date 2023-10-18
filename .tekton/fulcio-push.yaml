@@ -372,9 +372,9 @@ spec:
         operator: in
         values:
         - "false"
-    - name: run-unit-test
+    - name: run-unit-tests
       runAfter:
-      - prefetch-dependencies    
+      - build-container    
       taskRef:
         params:
         - name: name

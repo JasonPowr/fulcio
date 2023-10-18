@@ -372,6 +372,21 @@ spec:
         operator: in
         values:
         - "false"
+    - name: run-unit-test
+      runAfter:
+      - prefetch-dependencies    
+      taskRef:
+        params:
+        - name: name
+          value: go-unit-test
+        - name: bundle
+          value: quay.io/securesign/fulcio-unit-test@sha256:3ece784b9bc785497a7d7f9db1c4e0c2fbaa4ff28afa649d3a85064c9e4b564a
+        - name: kind
+          value: task
+        resolver: bundles
+      workspaces:
+        - name: source
+          workspace: workspace
     workspaces:
     - name: workspace
     - name: git-auth

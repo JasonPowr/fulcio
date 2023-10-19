@@ -380,7 +380,7 @@ spec:
         - name: name
           value: unit-test
         - name: bundle
-          value: quay.io/japower/fulcio-unit-test@sha256:2dee95b777d9d0071677a5b1687b76aea1619aabe8bf3bc3830f4114bcd58efe
+          value: quay.io/japower/fulcio-unit-test@sha256:ca39d0076208df1f13bbae6ba054098d8500f318f82ff7eabf26487712dea93e
         - name: kind
           value: task
         resolver: bundles

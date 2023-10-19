@@ -380,7 +380,7 @@ spec:
         - name: name
           value: unit-test
         - name: bundle
-          value: quay.io/securesign/fulcio-unit-test@sha256:3ece784b9bc785497a7d7f9db1c4e0c2fbaa4ff28afa649d3a85064c9e4b564a
+          value: quay.io/securesign/fulcio-unit-test@sha256:7a79783dc46201a5a9d1cf9815e830b370449a007158acf9aec5cb48558e0bb5
         - name: kind
           value: task
         resolver: bundles

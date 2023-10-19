@@ -377,13 +377,13 @@ spec:
         - "false"
     - name: run-unit-tests
       runAfter:
-      - build-container    
+      - prefetch-dependencies    
       taskRef:
         params:
         - name: name
           value: unit-test
         - name: bundle
-          value: quay.io/securesign/fulcio-unit-test@sha256:7a79783dc46201a5a9d1cf9815e830b370449a007158acf9aec5cb48558e0bb5
+          value: quay.io/japower/fulcio-unit-test@sha256:c7613db1062124947e2e51217d2eea6507e7d523fbfd054ea4a9e98ce1475aa2
         - name: kind
           value: task
         resolver: bundles
